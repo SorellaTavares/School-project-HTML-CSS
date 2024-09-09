@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body, html {
+    background-color: #D3D3D3;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 100%;
+}
+
+header {
+    background-color: #9E9E9E;
+    text-align: left;
+    margin: 8px;
+    padding: 8px;
+    border-radius: 1rem;
+    overflow: hidden;
+    min-height: 100px;
+    box-sizing: border-box;
+}
+
+#imgheader {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    flex-wrap: nowrap;
+}
+
+#headimg {
+    height: 100px;
+    border-radius: 5rem;
+    margin: 8px;
+    padding: 8px;
+    flex-shrink: 1;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    flex-shrink: 1;
+    flex-grow: 1;
+    font-size: 5vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+h2 {
+    margin: 8px;
+}
+
+a {
+    color: #FAEBD7;
+}
+
+a:visited {
+    color: #6D2C77;
+}
+
+nav {
+    background-color: #856088;
+    margin: 8px;
+    padding: 8px;
+    border-radius: 1rem;
+}
+
+main {
+    justify-content: space-between;
+    margin: 8px;
+    padding: 8px;
+}
+
+.container {
+    background-color: #856088;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+    padding: 8px;
+    border-radius: 1rem;
+}
+
+.content-container {
+    flex-direction: column;
+    background-color: #B2B2B2;
+    gap: 8px;
+    margin: 8px;
+    padding: 8px;
+    border-radius: 1rem;
+}
+
+section {
+    background-color: #D0D3D4;
+    min-height: 200px;
+    margin: 8px;
+    padding: 8px;
+    border-radius: 1rem;
+    position: relative;
+ } 
+
+article {
+    background-color:#C0C0C0;
+    flex: 1;
+    margin: 8px;
+    padding: 8px;
+    gap: 24px;
+    height: 150px;
+    border-radius: 1rem;
+    font-size: 1em;
+    overflow-wrap: break-word;
+    position: relative;
+}
+
+aside {
+    background-color: #D6D1C1;
+    flex: 0 0 auto;
+    flex-shrink: 1;
+    margin: 8px;
+    padding: 8px;
+    padding-left: 32px;
+    border-radius: 1rem;
+    font-size: 0.8em;
+    overflow-wrap: break-word;
+}
+
+.button-container {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.button {
+    background-color:   #8D8D4F;
+    color: #CC7722;
+    border: none;
+    padding: 16px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 1rem;
+
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #29380c;
+}
+
+.button:active {
+    background-color: #FFFFE0;
+}
+
+button:disabled {
+    background-color: #29380c;
+    color: #6D2C77;
+    cursor: not-allowed;
+}
+
+footer {
+    background-color: #856088;
+    text-align: center;
+    align-items: baseline;
+    margin: 8px;
+    padding: 8px;
+    margin-bottom: 16px;
+    border-radius: 1rem;
+}
+
+/*Medium screens*/
+@media (min-width: 768px) {
+
+    body, html {
+        flex-direction: column;
+    }
+    
+    .content-container {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 8px;
+    }
+
+     .sections-container {
+        background-color: #B2B2B2;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 8px;
+        margin: 8px;
+        padding: 8px;
+        border-radius: 1rem;
+    }
+    
+}
+
+/*Large screens*/
+@media (min-width: 1024px) {
+       
+    body {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    h1 {
+        font-size: 3vw;
+    }
+
+    nav {
+        width: 200px;
+        padding: 16px;
+    }
+
+    a {
+        display: flex;
+        flex-direction: column;
+        padding: 8px;
+        gap: 8px;
+    }
+
+    .large-screen {
+        display: flex;
+        flex: 1;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    main {
+        justify-content: flex-start;
+        margin: 8px;
+        padding: 8px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 10px;
+    }
+
+}
